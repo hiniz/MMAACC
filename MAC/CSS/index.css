@@ -138,65 +138,66 @@ section{
     overflow: hidden;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.glowing-videocontainer{
-    width: 1640px;
-    padding: 60px 140px ;
-    box-sizing: border-box;
-}
 .glowing-viral{
+    padding: 100px 0;
+    box-sizing: border-box;
+    
+}
+
+.glowing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.glowing-box{
     display: flex;
     flex-direction: column;
+    gap: 8px;
 }
 
-.glowing-video-box{
+.review-event-container{
+    width: 100%;
+    padding: 60px 0;
     display: flex;
-    gap: 20px;
     justify-content: center;
+    align-items: center;
 }
 
-.glowing-video{
-    width: 500px;
-    height: 724px;
+.review-event{
+    width: 1400px;
+    height: 451px;
+    border-radius: 2px;
+    background-image: url(../img/리뷰이벤트.png);
+    position: relative;
+    box-shadow: 5px 5px 5px #00000045;
 }
 
-.glowing-video-center{
+.review-event-text {
     width: 600px;
-    height: 853px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: absolute;
+    top: 92px;
+    left: 46px;
 }
+
+.review-event-text > button {
+    display: flex;
+    gap: 2px;
+    align-items: end;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
