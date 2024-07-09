@@ -6,9 +6,15 @@ video {
     width: 100%;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+}
+
 a{
     text-decoration: none;
-    color: #fff;
+    color: #222;
 }
 
 header {
@@ -19,6 +25,7 @@ header {
     position: fixed;
     top: 0;
     background-color: #00000070;
+    z-index: 5;
 }
 
 .header-container {
@@ -46,6 +53,10 @@ header {
     font-size: 20px;
 }
 
+.menu-list > a {
+    color: white;
+}
+
 .main-container {
     width: 100%;
     height: 100%;
@@ -55,6 +66,114 @@ section{
     padding: 60px 0;
     box-sizing: border-box;
 }
+
+.new-products-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.new-glow-lip{
+    width: 800px;
+    height: 1050px;
+    background-image: url(../img/글로우\ 플레이\ 텐더토크\ 립밤.jpg);
+    position: relative;
+    overflow: hidden;
+}
+
+.new-icon{
+    width: 56px;
+    height: 38px;
+    background-color: #ffffff80;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
+
+.glow-text{
+    width: 530px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    z-index: 1;
+}
+
+.glow-text > button {
+    font-size: 16px;
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    text-decoration-line: underline;
+    margin-top: 50px;
+}
+
+.button-arrow {
+    width: 18px;
+    height: 18px;
+}
+
+.glow-text-back{
+    background-color: #ffffff80;
+    width: 650px;
+    height: 220px;
+    transform: skewX(20deg);
+    position: absolute;
+    left: -50px;
+    bottom: 0;
+}
+
+.new-glow-blush{
+    width: 800px;
+    height: 1050px;
+    background-image: url(../img/글로우\ 플레이\ 쿠션\ 블러쉬.jpg);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .glowing-videocontainer{
     width: 1640px;
