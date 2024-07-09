@@ -1,0 +1,10 @@
+@font-face {
+    font-family: pretendard;
+    src: url(../FONT/Pretendard-Regular.woff) format('woff');
+}
+
+* {
+    font-family: 'pretendard';
+}
+
+
