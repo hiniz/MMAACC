@@ -1,10 +1,44 @@
 @font-face {
-    font-family: pretendard;
-    src: url(../FONT/Pretendard-Regular.woff) format('woff');
+    font-family: 'pre';
+    src: url(../FONT/Pretendard-Regular.woff);
 }
 
-* {
-    font-family: 'pretendard';
+@font-face {
+    font-family: 'pre-bold';
+    src: url(../FONT/Pretendard-Bold.woff);
 }
 
+@font-face {
+    font-family: 'pre-exbold';
+    src: url(../FONT/Pretendard-Black.woff);
+}
+
+html {
+    font-family: 'pre';
+}
+
+.bold {
+    font-family: 'pre-bold';
+}
+
+.exbold{
+    font-family: 'pre-exbold';
+}
+
+
+.font-18{
+    font-size: 18px;
+}
+
+.font-24{
+    font-size: 24px;
+}
+
+.font-36 {
+    font-size: 36px;
+}
+
+.font-56{
+    font-size: 56px;
+}
 

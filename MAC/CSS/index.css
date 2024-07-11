@@ -192,9 +192,127 @@ section{
     text-decoration: underline;
 }
 
+.recommend-lip-blush{
+    padding: 60px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.recommend-title{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+}
 
+.recommend-contents {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.arrow {
+    width: 50px;
+    height: 50px;
+}
 
+.recommend-box{
+    width: 1400px;
+    height: 700px;
+    background-image: url(../img/체리핑크.png);
+    position: relative;
+    box-shadow: 5px 5px 5px #00000045;
+}
+
+.recommend-text{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+.recommend-text > h3 {
+    margin-bottom: 40px;
+}
+
+.recommend-text > p {
+    margin-bottom: 30px;
+}
+
+.bestseller-container{
+    margin: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #222;
+}
+
+.best-category{
+    display: flex;
+    gap: 40px;    
+}
+
+.best-category > li > button {
+    color: #ddd;
+}
+
+.best-lip-container{
+    display: flex;
+}
+
+.bestseller{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.best-img-box{
+    width: 441px;
+    height: 537px;
+    border: 1px solid #222;
+    box-shadow: 5px 5px 5px #00000045;
+    display: flex;
+    align-items: center;
+}
+
+.best-img {
+    width: 441px;
+    height: 441px;
+}
+
+.best-title > p {
+    margin-top: 8px;
+    color: #666;
+}
+
+.best-info {
+    color: #666;
+}
+
+.color-list {
+    display: flex;
+}
+
+.color-pick{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #666;
+}
+
+.color-info {
+    color: #666;
+}
+
+.buy{
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    text-decoration: underline;
+    margin-top: 160px;
+}
 
 
 

@@ -91,6 +91,98 @@
         </div>
 
 
+        <div class="recommend-lip-blush">
+            <div class="recommend-title">
+                <h2 class="exbold font-56">M·A·C에서 추천하는 글로우 플레이 립 앤 치크 조합!</h2>
+                <p class="font-24">Glow Play Combination Recommended by Mac</p>
+            </div>
+
+            <div class="recommend-contents">
+                <button class="arrow-button">
+                    <figure class="arrow"><img src="../img/립치크조합왼쪽화살표.png" alt="arrow"></figure>
+                </button>
+                <div class="recommend-box">
+                    <div class="recommend-text">
+                        <h3 class="bold font-36">체리 핑크</h3>
+                        <p class="font-24">글로우 플레이 쿠션 블러쉬 #10 하트 인덱스글로우 플레이 텐더토크 립 밤 #7 벤터</p>
+                        <p class="font-24">브라이트 핑크 컬러의 조합으로 생기가득 글로우 메이크업을 완성해보세요.</p>
+                    </div>
+                </div>
+                <button class="arrow-button">
+                    <figure class="arrow"><img src="../img/립치크조합화살표.png" alt="arrow"></figure>
+                </button>
+            </div>
+        </div>
+
+        <div class="bestseller-container">
+
+            <h2 class="bold font-56">BEST SELLER</h2>
+
+            <ul class="best-category">
+                <li><button class="font-36">LIP</button></li>
+                <li><button class="font-36">EYE</button></li>
+                <li><button class="font-36">FACE</button></li>
+                <li><button class="font-36">SKINCARE</button></li>
+            </ul>
+
+            <div class="best-lip-container">
+
+                <div class="bestseller">
+
+                    <div class="best-img-box">
+                        <figure class="best-img"><img src="../img/베셀/엘레강스이즈런드.png" alt="best"></figure>
+                    </div>
+                    <div class="best-title">
+                        <h3 class="font-18">파우더 키스 리퀴드 립컬러</h3>
+                        <p>POWDER KISS LIQUID LIPCOLOUR</p>
+                    </div>
+                    <p class="font-18">44,000원</p>
+                    <p class="best-info">크리미한 벨벳 텍스처, 가볍고 촉촉한 매트 타입, 블러 효과, 롱 웨어링</p>
+
+                    <ul class="color-list">
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick"></div>
+                            </button>
+                        </li>
+                    </ul>
+                    <p class="color-info">엘레강스 이즈 런드</p>
+
+                    <button class="buy">구매하기
+                        <figure class="button-arrow">
+                            <img src="../img/화살표.png" alt="arr">
+                        </figure>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
 
 
 
@@ -100,5 +192,41 @@
 
 
     </section>
+
+    <script>
+
+        const colorPallet = [
+            {
+                src : '디보티드투칠리',
+                color : '#000000'
+            },
+            {
+                src : '루비부',
+                color : '#000000'
+            },
+            {
+                src : '핫팬츠',
+                color : '#000000'
+            },
+            {
+                src : '프리티플릿츠',
+                color : '#000000'
+            }
+        ]
+
+        const colorPick = document.getElementsByClassName('color-pick');
+        const bestImg = document.querySelector('.best-img')
+        const imgPlace = bestImg.querySelector('img');
+
+
+            for(let i = 0 ; i < colorPick.length ; i ++) {
+                colorPick[i].style.backgroundColor = colorPallet[i].color;
+
+                colorPick[i].addEventListener('click',()=>{
+                    imgPlace.setAttribute('src',`../img/베셀/${colorPallet[i].src}.png`)
+                })
+
+            }
+    </script>
 </body>
 </html>   
