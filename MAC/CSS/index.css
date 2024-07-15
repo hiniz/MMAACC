@@ -387,5 +387,101 @@ section{
     right: 540px;
 }
 
+.viva-glam-container {
+    padding: 60px 0;
+}
+
+.doyouknow-container{
+    display: flex;
+}
+
+.viva-img {
+    width: 50%;
+    height: 980px;
+}
+
+.do-you-know{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+
+.doyouknow-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.doyouknow-title > h2 {
+    color: #b10101;
+}
+
+.do-you-know > p {
+    color: #444;
+    text-align: center;
+}
+
+.do-you-know > h3 {
+    color: #222;
+}
+
+.timeline {
+    display: flex;
+    align-items: end;
+    gap: 2px;
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+.feed-container{
+    display: flex;
+}
+
+.feed{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.feed > h2 {
+    color: #b10101;
+}
+
+.feed > p {
+    text-align: center;
+}
+
+.girls-container {
+    display: flex;
+}
+
+.girls {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+    color: #222;
+}
+
+.girls > h2 {
+    color: #b10101;
+}
+
+.girls > p {
+    color: #444;
+    margin-top: 50px;
+}
+
+
+
 
 
