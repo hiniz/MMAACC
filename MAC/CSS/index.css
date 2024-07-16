@@ -520,7 +520,6 @@ section{
 .viva-lipstick-container {
     display: flex;
     flex-direction: column;
-  
 }
 
 .button-space {
@@ -540,8 +539,9 @@ section{
 }
 
 .viva-lipstick-contents {
-    max-width: 1900px;
-    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
