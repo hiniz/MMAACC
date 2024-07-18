@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    #sticky-section {
+      position: relative;
+    }
+    .content {
+      /* display: flex; */
+      padding-left: 50%;
+    }
+    .content > figure {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 50%;
+      flex-shrink: 0;
+      height: 100vh;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .content >figure.active {
+      opacity: 1;
+    }
+
+    .content > figure > img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .explane {
+      padding: 64px;
+      box-sizing: border-box;
+      height: 1000px;
+    }
+
+    .test-padding {
+      height: 2000px;
+      background-color: pink;
+      
+    }
+
+    .safty-margin {
+      height: 100vh;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <section class="test-padding"></section>
+  <section class="safty-margin"></section>
+
+
+  
+  <section id="sticky-section">
+    <ul class="contents-wrapper">
+      <li class="content">
+        <figure>
+          <img src="https://i.namu.wiki/i/Tq08nLcVvWb032svbKTwbY4EDtRtO-Ajtoqqe_on5NcC2waSgpHURR7vGr5rPExyVxGZL-g1s2f87yUvdkGNPg.webp" alt="">
+        </figure>
+        <div class="explane">
+          <h3>제목</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+        </div>
+      </li>
+      <li class="content">
+        <figure>
+          <img src="https://images.chosun.com/resizer/CkpzQW2xrIs6hL16s1MjPtMpEvs=/616x0/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/DVAQHUZ6WFCVZFLQQQDTOFWUBE.JPG" alt="">
+        </figure>
+        <div class="explane">
+          <h3>제목</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+        </div>
+      </li>
+      <li class="content">
+        <figure>
+          <img src="https://img.danawa.com/images/descFiles/6/67/5066355_X23LsD8Flx_1654592496740.jpeg" alt="">
+        </figure>
+        <div class="explane">
+          <h3>제목</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+        </div>
+      </li>
+      <li class="content">
+        <figure>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6_cSdY_yiJmErLViSxedc1yya6jue8npy-Q&s" alt="">
+        </figure>
+        <div class="explane">
+          <h3>제목</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt fuga commodi laborum cumque ipsum iusto nihil excepturi, quod molestias ad atque voluptatibus iste! Ut magni minima unde quo maiores veniam.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="safty-margin"></section>
+  <section class="test-padding"></section>
+  <script>
+    const contents = document.getElementsByClassName('content');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        if(entry.intersectionRatio >0 ) {
+          entry.target.children[0].classList.add('active');
+        }else {
+          entry.target.children[0].classList.remove('active');
+        }
+      })
+    })
+    for (const content of contents) {
+      io.observe(content);
+    }
+  </script>
+</body>
+</html>

@@ -26,18 +26,34 @@ const colorPallet = [
 
 ]
 
-const colorPick = document.getElementsByClassName('color-pick');
-const bestImg = document.querySelector('.best-img')
-const imgPlace = bestImg.querySelector('img');
+const bestseller = document.getElementsByClassName('bestseller');
 
+for(let i = 0 ; i < bestseller.length ; i ++) {
+    const bestImg = bestseller[i].querySelector('.best-img>img')
 
-    for(let i = 0 ; i < colorPick.length ; i ++) {
-        colorPick[i].style.backgroundColor = colorPallet[i].color;
+    const colorPick = bestseller[i].getElementsByClassName('color-pick')
 
-        colorPick[i].addEventListener('click',()=>{
-            imgPlace.setAttribute('src',`../img/베셀/${colorPallet[i].src}.png`)
+    for(let j = 0 ; j <colorPick.length; j++){
+        colorPick[j].addEventListener('click',()=>{
+            bestImg.setAttribute('src',`../img/베셀/${colorPick[j].dataset.src}.png`)
         })
-
+        try {
+            colorPick[j].style.backgroundColor = colorPick[j].dataset.color
+        }catch(e) {
+            console.log(e)
+        }
     }
+}
+
+
+// const imgPlace = bestImg.querySelector('img');
+
+
+    // for(let i = 0 ; i < colorPick.length ; i ++) {
+    //     colorPick[i].style.backgroundColor = colorPallet[i].color;
+
+       
+
+    // }
 
     // 

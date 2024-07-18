@@ -393,6 +393,7 @@ section{
     display: flex;
     align-items: end;
     gap: 20px;
+    justify-items: end;
 }
 
 .trend-container{
@@ -423,98 +424,77 @@ section{
     right: 540px;
 }
 
-.viva-glam-container {
-    padding: 60px 0;
+#sticky-section {
+    position: relative;
+    color: #222;
 }
 
-.doyouknow-container{
-    display: flex;
+.viva-wrapper
+
+.viva-content {
+    padding-left: 50%;
+}
+
+.viva-content > figure {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    flex-shrink: 0;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.viva-content > figure.active {
+    opacity: 1;
+    z-index: 0;
 }
 
 .viva-img {
-    width: 50%;
+    width: 940px;
     height: 980px;
 }
 
-.do-you-know{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
+.viva-img > img {
+    height: 100%;
+    object-fit: cover;
 }
 
-.doyouknow-title{
+.viva-explane {
+    padding: 16px;
+    box-sizing: border-box;
+    height: 1000px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 90px;
 }
 
-.doyouknow-title > h2 {
+.viva-explane-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.viva-explane-title > h2 {
     color: #b10101;
 }
 
-.do-you-know > p {
+.viva-explane-title > p {
     color: #444;
-    text-align: center;
 }
 
-.do-you-know > h3 {
-    color: #222;
-}
-
-.timeline {
+.text-button {
     display: flex;
-    align-items: end;
+    align-items: center;
     gap: 2px;
     text-decoration: underline;
-    margin-top: 50px;
 }
 
-.feed-container{
-    display: flex;
-}
-
-.feed{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-}
-
-.feed > h2 {
-    color: #b10101;
-}
-
-.feed > p {
-    text-align: center;
-}
-
-.girls-container {
-    display: flex;
-}
-
-.girls {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    text-align: center;
-    color: #222;
-}
-
-.girls > h2 {
-    color: #b10101;
-}
-
-.girls > p {
-    color: #444;
-    margin-top: 50px;
+.text-button:hover {
+    cursor: pointer;
 }
 
 .viva-lipstick-container {
@@ -539,8 +519,8 @@ section{
 }
 
 .viva-lipstick-contents {
-    position: relative;
     width: 100%;
+    position: relative;
     height: 100%;
     overflow: hidden;
 }
@@ -562,6 +542,7 @@ section{
 .viva-lip-video {
     width: 400px;
     height: 660px;
+    flex-shrink: 0;
 }
 
 .viva-lipstick {
