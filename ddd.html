@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-slide Carousel</title>
+    <style>
+        .carousel {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 33.33%; /* 3개의 슬라이드가 한 번에 보이게 설정 */
+            border-radius: 10px;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-button.prev {
+            left: 10px;
+        }
+        .carousel-button.next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="https://via.placeholder.com/800x300/FF0000/FFFFFF?text=Slide+1" alt="Slide 1">
+        <img src="https://via.placeholder.com/800x300/00FF00/FFFFFF?text=Slide+2" alt="Slide 2">
+        <img src="https://via.placeholder.com/800x300/0000FF/FFFFFF?text=Slide+3" alt="Slide 3">
+        <img src="https://via.placeholder.com/800x300/FFFF00/FFFFFF?text=Slide+4" alt="Slide 4">
+        <img src="https://via.placeholder.com/800x300/FF00FF/FFFFFF?text=Slide+5" alt="Slide 5">
+    </div>
+    <button class="carousel-button prev">&lt;</button>
+    <button class="carousel-button next">&gt;</button>
+</div>
+
+<script>
+    const images = document.querySelector('.carousel-images');
+    let currentIndex = 0;
+    const slideWidth = 33.33; // 슬라이드의 너비 비율
+    const totalSlides = images.children.length;
+    const visibleSlides = 3; // 한 번에 보일 슬라이드의 개수
+
+    function showSlide(index) {
+        if (index >= totalSlides - visibleSlides + 1) {
+            currentIndex = 0;
+        } else if (index < 0) {
+            currentIndex = totalSlides - visibleSlides;
+        } else {
+            currentIndex = index;
+        }
+        images.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+    }
+
+    document.querySelector('.prev').addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+    showSlide(currentIndex);
+</script>
+
+</body>
+</html>

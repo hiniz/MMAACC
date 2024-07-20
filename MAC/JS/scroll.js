@@ -1,3 +1,23 @@
+// 헤더이벤트
+const header = document.querySelector('header');
+let timeout;
+
+window.addEventListener("scroll", () => {
+    header.classList.add("hidden")
+
+    clearTimeout(timeout);
+
+    timeout = setTimeout(function(){
+        header.classList.remove("hidden")
+    }, 300)
+});
+
+
+
+
+
+
+
 const contents = document.getElementsByClassName('viva-content')
 const io = new IntersectionObserver((entries)=> {
     entries.forEach((entry)=>{
@@ -11,3 +31,7 @@ const io = new IntersectionObserver((entries)=> {
 for (const content of contents){
     io.observe(content);
 }
+
+
+
+

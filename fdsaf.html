@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .viva-carousel{
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0 40px;
+        }
+
+        .button-box{
+            display: flex;
+            gap: 16px;
+        }
+
+        .viva-slide {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .glamlipstick{
+            width: 400px;
+            height: 660px;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="viva-carousel">
+        <div class="button-box">
+            <button class="prev">p</button>
+            <button class="next">n</button>
+        </div>
+    
+        <div class="viva-slide">
+            
+            <div class="glamlipstick">
+                <video src="../img/비바글램립스틱.mp4" width="400px" height="660px" muted loop></video>
+            </div>
+
+            <div class="glamlipstick">
+                <figure class="glamimg"><img src="../img/비바이퀄리티.png" alt="비바이퀄리티"></figure>
+                <div class="glamcontents">
+                    <p>M·A·CXIMAL SILKY MATTE VIVA GLAM LIPSTICK</p>
+                    <p>38,000원</p>
+                    <p>4가지 색상, 수익금 100% 기부</p>
+                </div>
+                <div class="glamcolor-box">
+                    <div class="glamcolor"></div>
+                    <p>비바 이퀄리티</p>
+                </div>
+                <button class="text-button">ADD TO CART
+                    <figure class="button-arrow"><img src="../img/화살표.png" alt="arrow"></figure>
+                </button>
+            </div>
+
+            <div class="glamlipstick">
+                <figure class="glamimg"><img src="../img/비바엠파워드.png" alt="비바이퀄리티"></figure>
+                <div class="glamcontents">
+                    <p>M·A·CXIMAL SILKY MATTE VIVA GLAM LIPSTICK</p>
+                    <p>38,000원</p>
+                    <p class="sub">4가지 색상, 수익금 100% 기부</p>
+                </div>
+                <div class="glamcolor-box">
+                    <div class="glamcolor"></div>
+                    <p>비바 엠파워드</p>
+                </div>
+                <button class="text-button">ADD TO CART
+                    <figure class="button-arrow"><img src="../img/화살표.png" alt="arrow"></figure>
+                </button>            
+            </div>
+
+            <div class="glamlipstick">
+                <figure class="glamimg"><img src="" alt=""></figure>
+                <div class="glamcontents">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="glamcolor-box">
+                    <div class="glamcolor"></div>
+                    <p></p>
+                </div>
+                <button class="text-button"></button>
+            </div>
+
+            <div class="glamlipstick">
+                <figure class="glamimg"><img src="" alt=""></figure>
+                <div class="glamcontents">
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+                <div class="glamcolor-box">
+                    <div class="glamcolor"></div>
+                    <p></p>
+                </div>
+                <button class="text-button"></button>
+            </div>
+        </div>  
+
+        <script>
+            const viva = document.querySelector('.viva-slide')
+            let currentIndex = 0;
+            const slideWidth = 10;        
+            const totalSlides = viva.children.length;
+            const visibleSlides = 4; 
+
+            function showSlide(index) {
+                if (index >= totalSlides - visibleSlides + 1) {
+                    currentIndex = 0;
+                } else if (index < 0) {
+                    currentIndex = totalSlides - visibleSlildes;
+                } else {
+                    currentIndex = index;
+                }
+                viva.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+            }
+
+            document.querySelector('.prev').addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+        });
+
+        document.querySelector('.next').addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: 0 60px;
+        }
+        
+        .button-box {
+            display: flex;
+            gap: 20px;
+        }
+
+        button {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+
+        .slide{
+            display: flex;
+            gap: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .box{
+            width: 400px;
+            height: 660px;
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="button-box">
+            <button class="prev">p</button>
+            <button class="next">n</button>
+        </div>
+    
+        <div class="slide">
+    
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+    
+        </div>    
+    </div>
+
+    <script>
+        const boxes = document.querySelector('.slide')
+        let currentIndex = 0;
+        const slideWidth = 10; 
+        // 작을수록 적게움직임 
+        
+        const totalSlides = boxes.children.length;
+        const visibleSlides = 4; 
+
+        function showSlide(index) {
+            if (index >= totalSlides - visibleSlides + 1) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - visibleSlildes;
+            } else {
+                currentIndex = index;
+            }
+            boxes.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+        }
+
+        document.querySelector('.prev').addEventListener('click', () => {
+        showSlide(currentIndex - 1);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        showSlide(currentIndex + 1);
+    });
+
+
+    </script>
+</body>
+</html>
