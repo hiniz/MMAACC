@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .bestseller-container > h2 {
+            font-size: 56px;
+        }
+
+        .tap-button{
+            background-color: transparent;
+            border: none;
+            font-size: 36px;
+        }
+
+        /* .tab-content {
+            
+        } */
+
+        .products-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .bestseller-img {
+            width: 441px;
+            height: 537px;
+            border: 1px solid #222;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="bestseller-container">
+
+
+        <h2>Bestseller</h2>
+        <nav>
+            <button class="tap-button" data-tab="lip">Lip</button>
+            <button class="tap-button" data-tab="eye">Eye</button>
+            <button class="tap-button" data-tab="face">Face</button>
+            <button class="tap-button" data-tab="skincare">Skincare</button>
+        </nav>
+        
+        <div class="tab-content" id="lip">
+            
+            <div class="products-container">
+                
+                <div class="1">
+
+                    <div class="bestseller-img">
+                        <img src="" alt="">
+                    </div>
+                    
+                    <div class="bestseller-name">
+                        <h2>파우더 키스 리퀴드 립컬러</h2>
+                        <p>POWDER KISS LIQUID LIPCOLOUR</p>
+                    </div>
+
+                    <div class="bestseller-infor">
+                        <p>₩44,000</p>
+                        <p>크리미한 벨벳 텍스처, 가볍고 촉촉한 매트 타입, 블러 효과, 롱 웨어링</p>
+                    </div>
+
+                    <ul class="bestseller-colorlist">
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#C4304F" data-src="엘레강스이즈런드"></div>
+                            </button>
+                            엘레강스 이즈 런드
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#9E1B24" data-src="핫팬츠"></div>
+                            </button>
+                            핫팬츠
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#9E2C22" data-src="디보티드투칠리"></div>
+                            </button>
+                            디보티드 투 칠리
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#821424" data-src="루비부"></div>
+                            </button>
+                            루비부
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#331110" data-src="프리티플릿츠"></div>
+                            </button>
+                            프리티 플릿츠
+                        </li>
+                        <li>
+                            <button>
+                                <div class="color-pick" data-color="#7a1f26" data-src="패션이머전시"></div>
+                            </button>
+                            패션 이머전시
+                        </li>
+                    </ul>
+
+                    <button class="text-button">구매하기
+                        <figure class="button-arrow">
+                            <img src="" alt="">
+                        </figure>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

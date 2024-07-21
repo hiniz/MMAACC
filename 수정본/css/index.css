@@ -1,20 +1,32 @@
+@font-face {
+    font-family: 'score';
+    src: url(S-Core_Dream_OTF/SCDream4.otf);
+}
+
+html {
+    font-family: 'score';
+}
+
 img {
     width: 100%;
     display: block;
 }
 
-header{
-    position: fixed;
-    top: 0;
+header {
     width: 100%;
-    height: 60px;
-    background-color: #ffffff70;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 16px;
+    z-index: 2;
 }
 
 .header-container {
-    width: 100%;
-    height: 100%;
-    padding: 30px 100px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 1760px;
+    height: 56px;
+    padding: 16px 32px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -22,35 +34,44 @@ header{
 }
 
 .logo {
-    width: 150px;
+    width: 140px;
+    height: 20px;
 }
 
 .menu-container {
     display: flex;
-    gap: 40px;
+    gap: 30px;
 }
 
-.menu > a {
+.menu {
+    font-size: 18px;
     color: #222;
     text-decoration: none;
 }
 
-.header-etc {
+.login-container {
     display: flex;
-    gap: 10px;
+    gap: 4px;
 }
 
 .search-icon {
     width: 30px;
 }
 
-.box-button {
-    padding: 6px 16px;
-    border: 1px solid #222;
+.line-box {
     background-color: transparent;
+    border: 1px solid #222;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.login {
-    width: 85px;
-    height: 33px;
+.main {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
