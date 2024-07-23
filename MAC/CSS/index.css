@@ -80,6 +80,7 @@ section{
     justify-content: center;
 }
 
+
 .new-glow-lip{
     width: 800px;
     height: 1050px;
@@ -87,6 +88,7 @@ section{
     position: relative;
     overflow: hidden;
 }
+
 
 .new-icon{
     width: 56px;
@@ -350,6 +352,14 @@ section{
     color: #222;
 }
 
+.maximal-text {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: #222;
+    padding-left: 195px;
+}
+
 .plumping-gloss-text > p {
     color: #555;
     line-height: 120%;
@@ -364,7 +374,7 @@ section{
 
 .moving-text {
     width: 100%;
-    height: 100px;
+    height: 200px;
     position: relative;
     overflow: hidden;
 }
@@ -380,7 +390,7 @@ section{
 
 .whatisnew {
     display: inline-block;
-    font-size: 72px;
+    font-size: 200px;
     padding-right: 20px;
     animation: moveText 10s linear infinite;
 }
@@ -399,6 +409,7 @@ section{
     align-items: end;
     gap: 20px;
     justify-items: end;
+    justify-content: space-between;
 }
 
 .trend-container{
@@ -509,6 +520,7 @@ section{
     flex-direction: column;
     gap: 16px;
     padding: 0 40px;
+    box-sizing: border-box;
 }
 
 .button-box {

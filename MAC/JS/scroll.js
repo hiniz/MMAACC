@@ -13,6 +13,25 @@ window.addEventListener("scroll", () => {
 });
 
 
+// 이미지무빙
+
+// 박스 요소를 가져옵니다.
+var boxContainer = document.querySelector('.moving-container');
+var box = boxContainer.querySelector('.new-glow-lip');
+
+// 스크롤 이벤트 리스너를 추가합니다.
+window.addEventListener('scroll', function() {
+    var boxPos = boxContainer.offsetTop;
+    var boxHeight = boxContainer.offsetHeight;
+    var topOfWindow = window.pageYOffset;
+
+    if (boxPos < topOfWindow + window.innerHeight && boxPos + boxHeight > topOfWindow) {
+        box.classList.add('box-visible');
+    } else {
+        box.classList.remove('box-visible');
+    }
+});
+
 
 
 

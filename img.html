@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+  .glowplay-container {
+  width: 230px;
+  height: 331px;
+  margin: 0 auto;
+  }
+
+.works_main {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.works_container:hover .works_main {
+  transform: rotateY(180deg);
+}
+
+.works_front img {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 230px;
+  height: 331px;
+}
+
+.works_back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 230px;
+  height: 331px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  transform: rotateY(180deg);
+}
+  </style>
+</head>
+<body>
+
+  <div class="glowplay-container">
+    <div class="glowlip">
+      <div class="glowlip-front">
+        <img src="/핑크윤진.png" alt="">
+      </div>
+      <div class="glowlip-back">
+        <img src="핑크윤진뒤.png" alt="">
+        <div class="glowlip-text">
+          <h2>글로우 플레이 텐더토크 립 밤</h2>
+          <p>싱그러운 애플 레드부터 카라멜 누드까지! <br>
+            남녀노소 누구나 어울리는 7가지 다채롭고 플레이풀한 컬러의 립밤</p>
+          <button class="line-button">add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+</body>
+</html>

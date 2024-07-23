@@ -32,7 +32,7 @@
 
 const viva = document.querySelector('.viva-slide')
 let currentIndex = 0;
-const slideWidth = 10;        
+const slideWidth = 15;        
 const totalSlides = viva.children.length;
 const visibleSlides = 4; 
 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>마우스 오버 이미지 변경 예제</title>
+<style>
+  .best-img {
+    position: relative;
+    width: 441px; 
+    height: 441px; 
+  }
+  
+  .best-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<div class="best-img" onmouseover="changeImage(this)" onmouseout="restoreImage(this)">
+  <img src="../img/베셀/엘레강스이즈런드" alt="엘레강스이즈런드">
+</div>
+
+<script>
+  function changeImage(element) {
+    element.querySelector('img').src = '../img/엘레강스컬러';
+  }
+
+  function restoreImage(element) {
+    element.querySelector('img').src = '../img/베셀/엘레강스이즈런드';
+  }
+</script>
+
+</body>
+</html>
