@@ -74,83 +74,70 @@ section{
     box-sizing: border-box;
 }
 
-.new-products-container{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
+.glowplay-container{
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+      align-content: center;
+    }
 
+    .glow-work{
+      width: 600px;
+      height: 800px;
+      position: relative;
+    }
 
-.new-glow-lip{
-    width: 800px;
-    height: 1050px;
-    background-image: url(../img/글로우\ 플레이\ 텐더토크\ 립밤.jpg);
-    position: relative;
-    overflow: hidden;
-}
+    .glow-contents {
+      width: 600px;
+      height: 800px;
+      overflow: hidden;
+      display: inline-block;
+      border-radius: 30px;
+      transition: transform 1s ease-in-out, filter 1s ease-in-out;
+    }
 
+    .glow-contents img {
+      height: 100%;
+    }
 
-.new-icon{
-    width: 56px;
-    height: 38px;
-    background-color: #ffffff80;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 16px;
-    top: 16px;
-}
+    .glow-work:hover img {
+      transform: scale(1.2);
+      transform-origin: center;
+      filter: brightness(10%);
+      transition: transform 1s ease-in-out, filter 1s ease-in-out;
+    }
 
-.glow-text{
-    width: 530px;
-    height: 180px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    left: 16px;
-    bottom: 16px;
-    z-index: 1;
-    color: #222;
-}
+    .glow-text {
+      width: 410px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      bottom: 60px;
+      left: 70px;
+      opacity: 0;
+    }
 
-.glow-text > p {
-    color: #444;
-}
+    .line-button {
+      background-color: transparent;
+      border: 1px solid #222;
+      color: #222;
+      padding: 6px 16px ;
+      box-sizing: border-box;
+      border-radius: 2px;
+    }
 
-.glow-text > button {
-    font-size: 16px;
-    display: flex;
-    align-items: end;
-    gap: 2px;
-    text-decoration-line: underline;
-    margin-top: 50px;
-}
+    .glow-button {
+      border: 1px solid #fff;
+      color: #fff;
+      height: 40px;
+    }
 
-.button-arrow {
-    width: 18px;
-    height: 18px;
-}
-
-.glow-text-back{
-    background-color: #ffffff80;
-    width: 650px;
-    height: 220px;
-    transform: skewX(20deg);
-    position: absolute;
-    left: -50px;
-    bottom: 0;
-}
-
-.new-glow-blush{
-    width: 800px;
-    height: 1050px;
-    background-image: url(../img/글로우\ 플레이\ 쿠션\ 블러쉬.jpg);
-    position: relative;
-    overflow: hidden;
-}
+    .glow-work:hover .glow-text {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
 
 .glowing-viral{
     padding: 100px 0;

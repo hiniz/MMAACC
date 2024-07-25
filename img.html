@@ -5,72 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-  
-  .glowplay-container {
-  width: 230px;
-  height: 331px;
-  margin: 0 auto;
-  }
+    .glowplay-container{
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-content: center;
+    }
 
-.works_main {
-  position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
+    .glow-work{
+      width: 560px;
+      height: 700px;
+      position: relative;
+    }
 
-.works_container:hover .works_main {
-  transform: rotateY(180deg);
-}
+    .glow-contents {
+      width: 560px;
+      height: 700px;
+      overflow: hidden;
+      display: inline-block;
+      transition: transform 1s ease-in-out, filter 1s ease-in-out;
+    }
 
-.works_front img {
-  position: absolute;
-  backface-visibility: hidden;
-  width: 230px;
-  height: 331px;
-}
+    .glow-contents img {
+      width: 100%;
+      height: 100%;
+    }
 
-.works_back {
-  position: absolute;
-  backface-visibility: hidden;
-  width: 230px;
-  height: 331px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-  background-color: #000;
-  transform: rotateY(180deg);
-}
+    .glow-work:hover img {
+      transform: scale(1.2);
+      transform-origin: center;
+      filter: brightness(10%);
+      transition: transform 1s ease-in-out, filter 1s ease-in-out;
+    }
+
+    .glow-text {
+      width: 410px;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 60px;
+      left: 70px;
+      opacity: 0;
+    }
+
+    .line-button {
+      background-color: transparent;
+      border: 1px solid #222;
+      color: #222;
+      padding: 6px 16px ;
+      box-sizing: border-box;
+      border-radius: 2px;
+    }
+
+    .glow-button {
+      border: 1px solid #fff;
+      color: #fff;
+      height: 40px;
+    }
+
+    .glow-work:hover .glow-text {
+      opacity: 1;
+      transition: opacity 1s ease-in-out;
+    }
+    
   </style>
+
 </head>
 <body>
-
   <div class="glowplay-container">
-    <div class="glowlip">
-      <div class="glowlip-front">
-        <img src="/핑크윤진.png" alt="">
-      </div>
-      <div class="glowlip-back">
-        <img src="핑크윤진뒤.png" alt="">
-        <div class="glowlip-text">
+      <div class="glow-work">
+        <div class="glow-contents">
+          <img src="글로우립밤.png" alt="글로우립밤">
+        </div>
+        <div class="glow-text">
+          <p>new</p>
           <h2>글로우 플레이 텐더토크 립 밤</h2>
           <p>싱그러운 애플 레드부터 카라멜 누드까지! <br>
             남녀노소 누구나 어울리는 7가지 다채롭고 플레이풀한 컬러의 립밤</p>
-          <button class="line-button">add to cart</button>
+          <button class="line-button glow-button">add to cart</button>
         </div>
       </div>
-    </div>
+
+      <div class="glow-work">
+        <div class="glow-contents">
+          <img src="/글로우블러쉬.jpg" alt="글로우블러쉬">
+        </div>
+        <div class="glow-text">
+          <p>new</p>
+          <h2>글로우 플레이 쿠션 블러쉬</h2>
+          <p>마시멜로처럼 자꾸만 만지고 싶은 부드럽고 <br>
+            폭신한 바운드 플레이 텍스처의 쿠션 블러쉬</p>
+          <button class="line-button glow-button">add to cart</button>
+        </div>
+      </div>
   </div>
-
-
-
-
-
-
-
 </body>
 </html>
