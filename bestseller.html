@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+        }
+
+        .bestseller-container h2 {
+            font-size: 36px;
+            color: #222;
+        }
+
+        .best-category{
+            font-size: 20px;
+            display: flex;
+            gap: 60px;
+        }
+
+        .textbutton {
+            border: none;
+            font-size: 18px;
+            color: #222;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .bestseller-tabcontents{
+            display: none;
+        }
+
+        .bestseller-tabcontents.active{
+            display: flex;
+        }
+
+        .bestseller-contents {
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .bestseller-img {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #222;
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bestseller-img img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease;
+            object-fit: cover;
+        }
+
+        .img-after {
+            opacity: 0;
+        }
+
+        .bestseller-name {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .line-button {
+            border: 1px solid #222;
+            background-color: transparent;
+            font-size: 16px;
+            color: #222;
+            padding: 6px 16px;
+            cursor: pointer;
+        }
+
+        .bestseller-button {
+            height: 40px;
+        }
+
+        
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="bestseller-container">
+
+        <h2>Bestseller</h2>
+        <nav class="best-category">
+            <button class="textbutton" data-tab="lip">lip</button>
+            <button class="textbutton" data-tab="eye">eye</button>
+            <button class="textbutton" data-tab="face">face</button>
+            <button class="textbutton" data-tab="skincare">skincare</button>
+        </nav>
+
+        <div class="bestseller-tabcontents" id="lip">
+
+            <div class="bestseller-contents">
+
+                <div class="bestseller-img">
+                    <img src="/testimg/베셀/엘레강스이즈런드.png" alt="img" class="img-before">
+                    <img src="/testimg/베셀/엘레강스이즈런드2.png" alt="img" class="img-after">
+                </div>
+                <div class="bestseller-name">
+                    <p>POWDER KISS LIQUID LIPCOLOUR</p>
+                    <p>₩ 44,000</p>
+                </div>
+                <button class="line-button bestseller-button">add to cart</button>
+            
+            </div>
+            
+        </div>
+    
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const tapButtons = document.querySelectorAll('.textbutton');
+            const tabContents = document.querySelectorAll('.bestseller-tabcontents')
+
+            tapButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    tabContents.forEach(content => {
+                        if (content.id === tabId) {
+                            content.classList.add('active')
+                        }else {
+                            content.classList.remove('active')
+                        }
+                    })
+                })
+            })
+        })
+
+
+        const bestContents = document.getElementsByClassName('.bestseller-contents');
+
+        for(let i = 0 ; i < ones.length ; i ++) {
+            const imgBefore = ones[i].querySelector('.img-before')
+            const imgAfter = ones[i].querySelector('.img-after')
+
+            imgBefore.addEventListener('mouseover', function() {
+                imgBefore.style.opacity = '0';
+                imgAfter.style.opacity = '1';
+            });
+
+            imgBefore.addEventListener('mouseout', function() {
+                imgBefore.style.opacity = '1';
+                imgAfter.style.opacity = '0';
+            })
+        }
+    </script>
+    </body>
+</html>
