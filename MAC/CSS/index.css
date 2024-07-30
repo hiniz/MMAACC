@@ -452,6 +452,7 @@ nav {
 #sticky-section {
     position: relative;
     color: #222;
+    padding: 100vh 0px;
 }
 
 .viva-wrapper
