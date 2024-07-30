@@ -16,3 +16,39 @@ for(let i = 0 ; i < bestseller.length ; i ++) {
         }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function(){
+    const tapButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content')
+
+    tapButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+
+            tabContents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.add('active')
+                }else {
+                    content.classList.remove('active')
+                }
+            })
+        })
+    })
+})
+
+const ones = document.getElementsByClassName('bestseller-contents-box');
+
+for(let i = 0 ; i < ones.length ; i ++) {
+    const imgBefore = ones[i].querySelector('#img-before')
+    const imgAfter = ones[i].querySelector('#img-after')
+
+    imgAfter.addEventListener('mouseover', function() {
+        imgBefore.style.opacity = '0';
+        imgAfter.style.opacity = '1';
+    });
+
+    imgAfter.addEventListener('mouseout', function() {
+        imgBefore.style.opacity = '1';
+        imgAfter.style.opacity = '0';
+    })
+}
