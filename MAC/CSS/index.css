@@ -2,7 +2,9 @@ img {
     width: 100%;
     display: block;
 }
+
 video {
+    display: block;
     width: 100%;
 }
 
@@ -67,6 +69,17 @@ header.hidden{
 .main-container {
     width: 100%;
     height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.main-video{
+    aspect-ratio: 16 / 9;
+}
+
+.main-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 section{
@@ -80,75 +93,79 @@ section{
 }
 
 .glowplay-container{
-      display: flex;
-      gap: 100px;
-      justify-content: center;
-      align-content: center;
-    }
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-content: center;
+}
 
-    .glow-work{
-      width: 600px;
-      height: 800px;
-      position: relative;
-    }
+.glow-work{
+    width: 600px;
+    height: 800px;
+    position: relative;
+}
 
-    .glow-contents {
-      width: 600px;
-      height: 800px;
-      overflow: hidden;
-      display: inline-block;
-      border-radius: 30px;
-      transition: transform 1s ease-in-out, filter 1s ease-in-out;
-    }
+.glow-contents {
+    width: 600px;
+    height: 800px;
+    overflow: hidden;
+    display: inline-block;
+    border-radius: 30px;
+    transition: transform 1s ease-in-out, filter 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .glow-contents img {
-      height: 100%;
-    }
+.glow-contents img {
+    height: 100%;
+}
 
-    .glow-work:hover img {
-      transform: scale(1.2);
-      transform-origin: center;
-      filter: brightness(10%);
-      transition: transform 1s ease-in-out, filter 1s ease-in-out;
-    }
+.glow-work:hover img {
+    transform: scale(1.2);
+    transform-origin: center;
+    filter: brightness(10%);
+    transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
 
-    .glow-text {
-      width: 410px;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      position: absolute;
-      bottom: 60px;
-      left: 70px;
-      opacity: 0;
-    }
+.glow-text {
+    width: 410px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    bottom: 60px;
+    left: 70px;
+    opacity: 0;
+    text-align: center;
+    line-height: 120%;
+}
 
-    .line-button {
-      background-color: transparent;
-      border: 1px solid #222;
-      color: #222;
-      padding: 6px 16px ;
-      box-sizing: border-box;
-      border-radius: 2px;
-      cursor: pointer;
-    }
+.line-button {
+    background-color: transparent;
+    border: 1px solid #222;
+    color: #222;
+    padding: 6px 16px ;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer;
+}
 
-    .glow-button {
-      border: 1px solid #fff;
-      color: #fff;
-      height: 40px;
-    }
+.glow-button {
+    border: 1px solid #fff;
+    color: #fff;
+    height: 40px;
+}
 
-    .glow-work:hover .glow-text {
-      opacity: 1;
-      transition: opacity 1s ease-in-out;
-    }
+.glow-work:hover .glow-text {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
 
 .glowing-viral{
     padding: 100px 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 
 .glowing-container {
@@ -159,10 +176,18 @@ section{
 }
 
 .glowing-box{
+    width: 500px;
+    height: 723px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
+
+.glowing-box video {
+    width: 100%;
+    height: 100%;
+}
+
 
 .review-event-container{
     width: 100%;
@@ -221,6 +246,7 @@ section{
     align-items: center;
     gap: 16px;
 }
+
 .arrow {
     width: 50px;
     height: 50px;
@@ -259,7 +285,6 @@ img {
 .bestseller-container {
     max-width: 1780px;
     margin: 0 auto;
-    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -299,7 +324,7 @@ nav {
 }
 
 .bestseller-contents-box {
-    width: 400px;
+    width: calc((100% - 60px) /2);
     height: 547px;
     position: relative;
     display: flex;
@@ -307,7 +332,7 @@ nav {
 }
 
 .bestseller-img {
-    width: 400px;
+    width: 100%;
     height: 400px;
     border: 1px solid #222;
     position: relative;
@@ -335,7 +360,7 @@ nav {
 }
 
 .cart-button {
-    width: 400px;
+    width: 100%;
     height: 40px;
     position: absolute;
     bottom: 0;
@@ -349,6 +374,7 @@ nav {
 }
 
 .new-lipstick{
+    width: 80%;
     display: flex;
     align-items: end;
     gap: 20px;
@@ -692,4 +718,104 @@ footer {
 
 .moretag > a {
     color: #fff;
+}
+
+
+/* 수치는 ~~이하에서 작동 만 준다. */
+@media screen and (max-width: 1365px) {
+/* 태블릿 */
+
+.main-container {
+    width: 100%;
+}
+
+.glowplay-container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-content: center;
+}
+
+.glow-work{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+}
+
+.glow-contents {
+    width: 100%;
+    height: 1000px;
+}
+
+.glow-contents img {
+    width: 100%;
+    height: 100%;
+}
+
+.glow-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.glow-button {
+    width: 70%;
+}
+
+.glowing-viral {
+    padding: 60px 0;
+}
+
+.glowing-container{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.glowing-box{
+    width: 100%;
+    height: 950px;
+    align-items: center;
+}
+
+.recommend-lip-blush{
+    width: 100%;
+    justify-content: center;
+}
+
+.recommend-title{
+    text-align: center;
+}
+
+.recommend-title h2 {
+    font-size: 36px;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+}
+
+.recommend-box{
+    width: 680px;
+    height: 500px;
+}
+
+.bestseller-container{
+    max-width: 100%;
+    padding: 60px 32px;
+}
+
+.products-container {
+    flex-wrap: wrap;
+}
+
+
+
+}
+
+/* 그래야 태블릿에서 작성한 반응형 작성들을 모바일에서도 그대로 이어 사용할 수 있다. */
+@media screen and (max-width: 767px) {
+/* 모바일 */
 }
